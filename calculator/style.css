@@ -1,0 +1,72 @@
+/*GENERAL*/
+html{
+    box-sizing: border-box;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+:root{
+    --main-color: #fff;
+    --text-color: #333;
+    --bcg-color-one: #ddd;
+    --bcg-color-two: #f9f9f9;
+    --bcg-color-three: #4d90fe;
+
+    font-size: 16px;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*LAYOUT*/
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calculator{
+    padding: 1.25rem;
+    border: 1px solid var(--bcg-color-one);
+    border-radius: 5px;
+}
+.input{
+    width: 100%;
+    padding: 2rem .75rem;
+    border: 1.5px solid var(--bcg-color-one);
+}
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.buttons button{
+    font-size: 1.5rem;
+    padding: .75rem 2rem;
+    cursor: pointer;
+}
+.oprator-btn{
+    background-color: var(--bcg-color-one);
+    font-family: 'Open Sans';
+    font-weight: 100;
+    border: none;
+}
+.num-btn,
+.clear-btn{
+    background-color: var(--bcg-color-two);
+    border: 1px solid var(--bcg-color-one);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+}
+.eq-btn{
+    grid-column: span 2;
+    background-color: var(--bcg-color-three);
+    border: none;
+    color: var(--main-color);
+}
